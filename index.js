@@ -20,5 +20,40 @@ const sortCards = () => {
   cardContainer.append(...cards); 
 };
 
+const c = document.querySelectorAll('.card');
+
+
+function applyStyles() {
+    const screenWidth = window.innerWidth;
+
+    c.forEach((c, index) => {
+        if (screenWidth <= 375) {
+            
+            c.style.background = `linear-gradient(to right, var(--color-${index + 1}) 10%, white 0%, #efefef 100%)`;
+        } else {
+            
+            c.style.background = `var(--color-${index + 1})`;
+        }
+    });
+}
+
+
+applyStyles();
+
+
+
 
 sortButton.addEventListener('click', sortCards);
+window.addEventListener('resize', applyStyles);
+
+/* git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/ToyeshShendeSyngenta/PRACTICE_HTML_CSS.git
+
+git push origin main */
+
+// git push --set-upstream origin master
+// git add . 
+// git commit -m "second commit"
+// git push

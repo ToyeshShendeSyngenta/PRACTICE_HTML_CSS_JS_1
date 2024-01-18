@@ -1,3 +1,15 @@
+:root {
+    --color-1: #2B8EAD;
+    --color-2: #333333;
+    --color-3: #6F98A8;
+    --color-4: #BFBFBF;
+    --color-5: #444444;
+    --color-6: #2F454E;
+    --color-7: #72C3DC;
+    --color-8: #000000;
+    --color-9: #72C3DC;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -19,16 +31,25 @@
 
 }
 
-.card-container {
+/* .card-container {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start; 
  
     
+} */
+.card-container {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    list-style: none; 
+    padding: 0;
 }
 
-.card {
+
+/* .card {
     flex: 0 1 calc(33.33% );
     height: 150px;
     background-color: #2B8EAD;
@@ -39,6 +60,27 @@
     align-items: center;
     justify-content: center;
    
+} */
+
+.card {
+    flex: 0 1 calc(33.33%);
+    height: 0;
+    padding-bottom: 33.33%;
+    background-color: #2B8EAD;
+    color:white;
+    
+    text-align: center;
+    display: flex;
+    font-size: 4.5em;
+    position: relative;
+}
+
+.card span {
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -72,7 +114,7 @@
     background-color: #2B8EAD;
 }
 
-.card:nth-child(1) {
+/* .card:nth-child(1) {
     background-color: #2B8EAD;
 }
 
@@ -106,7 +148,7 @@
 
 .card:nth-child(9) {
     background-color: #72C3DC;
-}
+} */
 
 
 @media screen and (max-width: 375px) {
@@ -139,10 +181,13 @@
         height: 190px;
         max-width: 374px;
         width: 100%;
-        background: linear-gradient(to right,  #2B8EAD 10%, white 0%,#efefef 100%);
+        
+      
+       
         color: black;
         align-items: start;
         margin-bottom: 8px;
+        font-size: 2em;
     }
     .buttoncontainer{
         
@@ -155,8 +200,8 @@
     .button-1 {
         margin-right: 10px;
     }
-    .card:nth-child(1) {
-        background-color: #2B8EAD;
+    /* .card:nth-child(1) {
+        background:linear-gradient(to right, #2B8EAD 10%, white 0%,#efefef 100%);
     }
     
     .card:nth-child(2) {
@@ -193,10 +238,12 @@
         
          background: linear-gradient(to right,  #000000 10%, white 0%,#efefef 100%);
     }
+  
     
     .card:nth-child(9) {
-        background-color: #72C3DC;
+        
          background: linear-gradient(to right,  #72C3DC 10%, white 0%,#efefef 100%);
-    }
+    } */
+    
 
 }
