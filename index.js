@@ -1,4 +1,14 @@
-const cardContainer = document.querySelector('.card-container');
+
+
+
+const cardContainer = document.getElementById('cardContainer');
+for (let i = 1; i <= 9; i++) {
+const listItem = document.createElement('li');
+listItem.className = 'card';
+listItem.innerHTML = `<span>${i}</span>`;
+cardContainer.appendChild(listItem);
+}
+
 const cards = Array.from(cardContainer.querySelectorAll('.card'));
 
 
@@ -36,6 +46,7 @@ function applyStyles() {
         }
     });
 }
+
 
 
 applyStyles();
